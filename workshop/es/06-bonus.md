@@ -1,122 +1,122 @@
 <!-- l10n-sync: source-file="workshop/06-bonus.md" -->
-# 🎉 Bonus y Extensiones
+# 🎉 Bonus y ampliaciones
 
 ---
 
-¡Has construido una aplicación de GitHub Battle completamente funcional! Ahora es momento de ir más allá con **desafíos abiertos**.
+¡Has creado una aplicación de GitHub Battle completamente funcional! Ahora es el momento de ir más allá con **desafíos abiertos**.
 
 <!-- track:vscode:start -->
-Usa **Agent Mode** para todos estos — describe lo que quieres y deja que Copilot te ayude a construirlo.
+Usa **Agent Mode** para todos estos desafíos: describe lo que quieres y deja que Copilot te ayude a implementarlo.
 <!-- track:vscode:end -->
 
 <!-- track:cli:start -->
-Usa Copilot CLI para todos estos — combina contexto con `@file`, `/plan`, modo normal y `/review` según sea necesario.
+Usa Copilot CLI para todos estos desafíos: combina el contexto con `@file`, `/plan`, el modo normal y `/review` según sea necesario.
 <!-- track:cli:end -->
 
 ---
 
-## 🏆 Desafío 1: Banner de Ganador
+## 🏆 Desafío 1: Anuncio del ganador
 
-Después de que ambos gráficos de contribuciones carguen, compara los totales y muestra un anuncio dinámico del ganador.
+Cuando se hayan cargado los dos gráficos de contribuciones, compara los totales y muestra un anuncio dinámico del ganador.
 
 **Qué construir:**
-- Compara las contribuciones totales de ambos usuarios
-- Muestra **"🏆 {username} WINS! 🏆"** con un estilo de celebración si hay un ganador claro
-- Muestra **"🤝 IT'S A TIE! 🤝"** si las contribuciones son iguales
-- Agrega animación o confeti para más efecto
+- Compara el total de contribuciones de ambos usuarios.
+- Muestra **"🏆 {username} WINS! 🏆"** con un estilo festivo si hay un ganador claro.
+- Muestra **"🤝 IT'S A TIE! 🤝"** si ambos tienen el mismo número de contribuciones.
+- Añade una animación o confeti para darle más vistosidad.
 
 **Sugerencia de prompt:**
-> After both users' contribution data loads, compare total contributions and display a winner banner. Show "🏆 {username} WINS! 🏆" if one user has more contributions, or "🤝 IT'S A TIE! 🤝" if equal. Make it visually exciting with CSS animations.
+> Cuando se hayan cargado los datos de contribuciones de ambos usuarios, compara los totales y muestra un anuncio del ganador. Muestra «🏆 {username} WINS! 🏆» si un usuario tiene más contribuciones, o «🤝 IT'S A TIE! 🤝» si tienen el mismo número. Dale un aspecto llamativo con animaciones CSS.
 
 ---
 
-## 🏆 Desafío 2: Contador de Racha
+## 🏆 Desafío 2: Contador de rachas
 
-Calcula y muestra la racha de contribuciones consecutivas más larga de cada usuario.
+Calcula y muestra la racha más larga de días consecutivos con contribuciones de cada usuario.
 
 **Qué construir:**
-- Analiza los datos de contribuciones día por día
-- Encuentra la serie más larga de días consecutivos con al menos una contribución
-- Muestra el conteo de la racha de forma prominente para cada usuario
-- Resalta quién tiene la racha más larga
+- Analiza día a día los datos de contribuciones.
+- Encuentra la serie más larga de días consecutivos con al menos una contribución.
+- Muestra de forma destacada la duración de la racha de cada usuario.
+- Resalta quién tiene la racha más larga.
 
 **Sugerencia de prompt:**
-> Add a streak counter feature that analyzes each user's contribution data to find their longest consecutive contribution streak. Display "🔥 Longest Streak: X days" for each user below their contribution graph.
+> Añade un contador de rachas que analice los datos de contribuciones de cada usuario para encontrar su racha más larga de días consecutivos. Debajo del gráfico de contribuciones de cada usuario, muestra «🔥 Longest Streak: X days».
 
 ---
 
-## 🏆 Desafío 3: Historial de Batallas
+## 🏆 Desafío 3: Historial de batallas
 
-Persiste los resultados de las batallas para que los usuarios puedan ver sus enfrentamientos anteriores.
+Guarda los resultados de las batallas para que se puedan consultar los enfrentamientos anteriores.
 
 **Qué construir:**
-- Guarda cada resultado de batalla en `localStorage` (nombres de usuario, totales, ganador, marca de tiempo)
-- Agrega una sección **"Recent Battles"** debajo del área principal de batalla
-- Muestra las últimas 5–10 batallas con resultados
-- Agrega un botón "Clear History"
+- Guarda en `localStorage` el resultado de cada batalla (nombres de usuario, totales, ganador y marca de tiempo).
+- Añade una sección **"Recent Battles"** debajo del área principal de batalla.
+- Muestra los resultados de las últimas 5–10 batallas.
+- Añade un botón «Clear History».
 
 **Sugerencia de prompt:**
-> Save battle results to localStorage after each comparison. Add a "Recent Battles" section that displays the last 10 battles with usernames, contribution totals, the winner, and when the battle happened. Include a "Clear History" button.
+> Guarda los resultados de cada batalla en localStorage después de compararlos. Añade una sección «Recent Battles» que muestre las últimas 10 batallas, los nombres de usuario, el total de contribuciones, el ganador y la fecha de cada batalla. Incluye un botón «Clear History».
 
 ---
 
-## 🏆 Desafío 4: Efectos de Sonido
+## 🏆 Desafío 4: Efectos de sonido
 
-Agrega efectos de sonido retro arcade usando la Web Audio API — sin necesidad de archivos externos.
+Añade efectos de sonido de arcade retro con la Web Audio API, sin necesidad de archivos externos.
 
 **Qué construir:**
-- Sonido de **insertar moneda** cuando se hace clic en el botón "Battle!"
-- Sonido de **power up** cuando los resultados cargan exitosamente
-- Sonido de **explosión** cuando ocurre un error (usuario no encontrado, fallo de API)
-- Un botón de alternancia para silenciar/activar sonido
+- Un sonido de **inserción de moneda** al hacer clic en el botón «Battle!».
+- Un sonido de **potenciación** cuando se carguen correctamente los resultados.
+- Un sonido de **explosión** cuando se produzca un error (usuario no encontrado o fallo de la API).
+- Un botón para activar o silenciar el sonido.
 
 **Sugerencia de prompt:**
-> Add retro arcade sound effects using the Web Audio API (no audio files). Play a coin insert sound on battle start, a power-up sound when results load, and an explosion sound on errors. Generate the sounds programmatically with oscillators and gain nodes. Include a mute toggle.
+> Añade efectos de sonido de arcade retro con la Web Audio API (sin archivos de audio). Reproduce el sonido de insertar una moneda al iniciar una batalla, el de potenciación cuando se carguen los resultados y el de explosión cuando se produzca un error. Genera los sonidos mediante código con osciladores y nodos de ganancia. Incluye un control para silenciar el sonido.
 
 ---
 
-## 🏆 Desafío 5: Secuencia de Batalla Animada
+## 🏆 Desafío 5: Secuencia de batalla animada
 
-Crea suspenso con una cuenta regresiva dramática antes de revelar los resultados.
+Crea expectación con una cuenta atrás dramática antes de mostrar los resultados.
 
 **Qué construir:**
-- Cuando se haga clic en "Battle!", muestra una superposición a pantalla completa
-- Anima: **"3..."** → **"2..."** → **"1..."** → **"⚡ FIGHT! ⚡"**
-- Luego revela los gráficos de contribuciones con una entrada dramática
-- Usa animaciones CSS o temporización con JavaScript
+- Al hacer clic en «Battle!», muestra una superposición a pantalla completa.
+- Anima la secuencia: **"3..."** → **"2..."** → **"1..."** → **"⚡ FIGHT! ⚡"**.
+- Después, muestra los gráficos de contribuciones con una entrada espectacular.
+- Usa animaciones CSS o temporizadores de JavaScript.
 
 **Sugerencia de prompt:**
-> Add an animated battle sequence when the user clicks "Battle!". Show a countdown overlay: "3..." then "2..." then "1..." then "⚡ FIGHT! ⚡" with each step lasting about 1 second. After the countdown, reveal the results with a slide-in animation.
+> Añade una secuencia de batalla animada al hacer clic en «Battle!». Muestra una cuenta atrás superpuesta: «3...», «2...», «1...» y «⚡ FIGHT! ⚡», con una duración aproximada de 1 segundo por paso. Cuando termine la cuenta atrás, muestra los resultados con una animación de entrada lateral.
 
 ---
 
-## 🏆 Desafío 6: Leyenda de Contribuciones
+## 🏆 Desafío 6: Leyenda de contribuciones
 
-Agrega una leyenda de escala de colores que coincida con la paleta de colores del gráfico de contribuciones.
+Añade una leyenda de escala de colores que coincida con la paleta del gráfico de contribuciones.
 
 **Qué construir:**
-- Una leyenda horizontal mostrando los niveles de intensidad de contribuciones
-- Etiquetas desde **"Less"** hasta **"More"**
-- Usa la paleta de colores real de la respuesta de la API de contribuciones de GitHub
-- Posiciónala cerca de los gráficos de contribuciones
+- Una leyenda horizontal con los niveles de intensidad de las contribuciones.
+- Etiquetas desde **"Less"** hasta **"More"**.
+- La paleta de colores real de la respuesta de la API de contribuciones de GitHub.
+- Colócala cerca de los gráficos de contribuciones.
 
 **Sugerencia de prompt:**
-> Add a contribution legend below the graphs showing the color scale from the API's color palette. Display a row of colored squares ranging from "Less" (lightest) to "More" (darkest), matching the actual contribution level colors returned by the API.
+> Añade debajo de los gráficos una leyenda de contribuciones que muestre la escala de colores de la paleta de la API. Muestra una fila de cuadrados de color desde «Less» (el más claro) hasta «More» (el más oscuro), según los colores reales de los niveles de contribución que devuelve la API.
 
 ---
 
-## 🏆 Desafío 7: Compartir Resultados
+## 🏆 Desafío 7: Compartir resultados
 
-Permite que los usuarios compartan sus resultados de batalla con un solo clic.
+Permite compartir los resultados de una batalla con un solo clic.
 
 **Qué construir:**
-- Un botón **"📋 Share Results"** que aparece después de una batalla
-- Copia un resumen de texto formateado al portapapeles
-- Incluye nombres de usuario, totales de contribuciones y el ganador
-- Muestra un breve mensaje de confirmación "Copied!"
+- Un botón **"📋 Share Results"** que aparece después de una batalla.
+- Copia al portapapeles un resumen de texto con formato.
+- Incluye los nombres de usuario, los totales de contribuciones y el ganador.
+- Muestra brevemente el mensaje de confirmación «Copied!».
 
 **Sugerencia de prompt:**
-> Add a "📋 Share Results" button that copies a formatted battle summary to the clipboard. The summary should include both usernames, their contribution totals, and who won. Use the Clipboard API and show a brief "Copied to clipboard!" confirmation.
+> Añade un botón «📋 Share Results» que copie al portapapeles un resumen de la batalla con formato. El resumen debe incluir ambos nombres de usuario, sus totales de contribuciones y quién ha ganado. Usa la Clipboard API y muestra brevemente el mensaje «Copied to clipboard!» para confirmar la copia.
 
 ---
 
@@ -130,30 +130,30 @@ Si quieres explorar más funcionalidades de Copilot CLI después del taller prin
 - Usa `/session` y `/session plan` para inspeccionar cómo el CLI está rastreando tu trabajo actual.
 <!-- track:cli:end -->
 
-## �� ¡Felicitaciones!
+## 🎊 ¡Enhorabuena!
 
-¡Has completado el taller **Mona Mayhem: GitHub Battle**! Esto es lo que lograste:
+¡Has completado el taller **Mona Mayhem: GitHub Battle**! Esto es lo que has conseguido:
 
-### Lo Que Construiste
+### Lo que has creado
 
-- ✅ Una **aplicación web completa de múltiples páginas** a partir de una especificación de diseño
-- ✅ Una **página de inicio** con temática retro arcade y diseño responsivo
-- ✅ Una **arena de batalla** que obtiene y compara datos reales de contribuciones de GitHub
-- ✅ **Gráficos de contribuciones interactivos** con niveles de actividad codificados por colores
-- ✅ **Manejo de errores, estados de carga y mejoras de accesibilidad**
-- ✅ **Diseño responsivo** que funciona en todos los dispositivos
+- ✅ Una **aplicación web multipágina completa** a partir de una especificación de diseño.
+- ✅ Una **página de inicio** con temática de arcade retro y diseño adaptable.
+- ✅ Una **arena de batalla** que obtiene y compara datos reales de contribuciones de GitHub.
+- ✅ **Gráficos de contribuciones interactivos** con niveles de actividad diferenciados por colores.
+- ✅ **Gestión de errores, estados de carga y mejoras de accesibilidad**.
+- ✅ **Diseño adaptable** para distintos dispositivos.
 
-### Lo Que Practicaste
+### Lo que has practicado
 
 | Habilidad | Lo Que Practicaste |
 |-----------|-------------------|
-| **Context Engineering** | Darle a Copilot los archivos, instrucciones y restricciones correctas |
-| **Planificación** | Generar y refinar planes de implementación antes de programar |
-| **Codificación Agéntica** | Delegar trabajo en múltiples archivos y múltiples pasos a Copilot |
-| **Iteración de Diseño** | Comenzar desde una dirección visual y refinar hacia un resultado pulido |
-| **Disciplina de Revisión** | Inspeccionar cambios generados por IA antes de hacer commit |
+| **Ingeniería de contexto** | Proporcionar a Copilot los archivos, las instrucciones y las restricciones adecuadas |
+| **Planificación** | Generar y perfeccionar planes de implementación antes de programar |
+| **Programación agéntica** | Delegar en Copilot tareas de varios pasos que afectan a distintos archivos |
+| **Iteración del diseño** | Partir de una dirección visual y perfeccionarla hasta obtener un resultado pulido |
+| **Disciplina de revisión** | Inspeccionar los cambios generados por IA antes de hacer commit |
 
-### 🚀 Sigue Adelante
+### 🚀 Sigue aprendiendo
 
 - 📺 [Canal de YouTube de VS Code](https://www.youtube.com/@code) — Tips, tutoriales y novedades
 - 📖 [Documentación de GitHub Copilot](https://docs.github.com/en/copilot) — Documentación oficial y guías
@@ -165,4 +165,4 @@ Si quieres explorar más funcionalidades de Copilot CLI después del taller prin
 
 ## 🙏 ¡Gracias!
 
-¡Gracias por unirte a este taller! Has experimentado cómo GitHub Copilot puede acelerar cada fase del desarrollo — desde la planificación y el diseño hasta la implementación y el pulido. Las técnicas que practicaste aquí se aplican a cualquier proyecto, cualquier framework y cualquier escala. ¡Ahora ve y construye algo increíble! 🚀
+¡Gracias por participar en este taller! Has descubierto cómo GitHub Copilot puede acelerar todas las fases del desarrollo, desde la planificación y el diseño hasta la implementación y el pulido. Las técnicas que has practicado aquí sirven para cualquier proyecto, framework y escala. ¡Ahora ve y crea algo increíble! 🚀
